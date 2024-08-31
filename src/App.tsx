@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import AirdropRequest from "./components/airdrop-request";
 import { Toaster } from "./components/ui/toaster";
+import Nft from "./components/nft";
 const queryClient = new QueryClient();
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="">
         <QueryClientProvider client={queryClient}>
-          <AirdropRequest />
+          <Nft />
         </QueryClientProvider>
 
         <Toaster />

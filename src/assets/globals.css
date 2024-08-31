@@ -279,3 +279,65 @@
 .nav-menu-mobile-main-vertical.nav-menu-closed {
   right: -100%;
 }
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  @apply leading-tight font-bold font-sans;
+}
+
+h1 {
+ @apply text-4xl my-6;
+}
+
+h2 {
+ @apply text-2xl my-2;
+}
+
+h3 {
+ @apply text-xl my-4;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+  color: #666;
+}
+
+p {
+  @apply text-[1.2rem] mb-4;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+ul {
+  list-style-type: disc; /* Adds bullets */
+}
+
+ol {
+  list-style-type: decimal; /* Adds numbers */
+}
+
+li {
+  margin-bottom: 0.5em; /* Space between list items */
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 0.25em solid #ddd;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 1.5em;
+}

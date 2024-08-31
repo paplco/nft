@@ -7,6 +7,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    './src/**/*.{mdx,md}',
     // "./node_modules/@ekonavi/ekotema/**/*.{js,ts,jsx,tsx,css}"
   ],
   prefix: "",
