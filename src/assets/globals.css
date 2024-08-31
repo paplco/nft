@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: hsl(139, 41%, 72%);
+    --background-menu: hsl(134, 54%, 80%);
+    --background-menu-hover: hsl(134, 54%, 90%);
+    --foreground: hsl(123.43deg 28% 24.51%);
+    --foreground-menu: hsl(143 61 20);
+    --foreground-menu-hover: hsl(143 61 40);
+    --primary-text: hsl(143 61 20);
+    --muted-text: hsl(143, 38%, 34%);
+    --background-object: hsla(0, 0%, 100%, 0.944);
+    --background-line: hsla(0, 0%, 0%, 0.272);
+
+    --bg-darker-10: hsla(0, 0%, 0%, 0.1);
+    --bg-darker-20: hsla(0, 0%, 0%, 0.2);
+    --bg-darker-40: hsla(0, 0%, 0%, 0.4);
+    --bg-lighter-10: hsla(0, 0%, 100%, 0.1);
+    --bg-lighter-20: hsla(0, 0%, 100%, 0.2);
+    --bg-lighter-40: hsla(0, 0%, 100%, 0.4);
+
+    --primary: hsl(30, 92%, 33%);
+    --primary-foreground: hsl(33.22deg 62.83% 89.55%);
+    --primary-hover: hsl(30, 80%, 56%);
+    --primary-hover-foreground: hsl(0, 0%, 100%);
+    --primary-hover-border: hsl(30 54% 80%);
+
+    --secondary: hsl(117, 24%, 31%);
+    --secondary-foreground: hsl(99, 100%, 75%);
+    --secondary-hover: hsl(117, 31%, 55%);
+    --secondary-hover-foreground: hsl(0, 0%, 100%);
+    --secondary-hover-border: hsl(89, 62%, 73%);
+
+    --accent: hsl(98 72 68);
+    --accent-foreground: hsl(98 40 20);
+    --accent-hover: hsl(98 80 80);
+    --accent-hover-foreground: hsl(0, 0%, 0%);
+    --accent-hover-border: hsl(98 90 90);
+
+    --muted: hsl(0 0% 53.67%);
+    --muted-foreground: hsl(0 0% 23.02%);
+    --muted-hover: hsl(0 0% 70%);
+    --muted-hover-foreground: hsl(0, 0%, 0%);
+    --muted-hover-border: hsl(0 0% 80%);
+
+    --disabled: hsla(0, 0%, 15%, 0.119);
+    --disabled-foreground: hsla(0, 0%, 25%, 0.575);
+    --disabled-hover: hsla(0, 0%, 15%, 0.249);
+    --disabled-foreground-hover: hsla(0, 0%, 86%, 0.631);
+    --disabled-hover-border: hsla(0, 0%, 80%, 0);
+
+    --destructive: hsl(346 84 34);
+    --destructive-foreground: hsl(346 70 87);
+    --destructive-hover: hsl(346 90 50);
+    --destructive-hover-foreground: hsl(0, 0%, 100%);
+    --destructive-hover-border: hsl(346 90 80);
+
+    --translucent: hsla(0, 0%, 100%, 0.20);
+    --translucent-foreground: var(--muted-foreground);
+    --translucent-hover: hsla(0, 0%, 100%, 0.60);
+    --translucent-hover-border: transparent;
+
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --modal-bg: hsla(137, 30%, 14%, 0.721);
+    --modal-card: hsl(133, 29%, 84%);
+
+    --border: hsla(0, 0%, 30%, 0.285);
+    --input: hsl(20 5.9% 90%); 
+    --ring: hsl(210, 10%, 23%);
+    --icon: hsl(0, 0%, 100%);
+    --icon-bg: hsla(0, 0%, 0%, 0.227);
+
+    --radius: 0.5rem;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1400px;
+  }
+
+  .light {
+    --background: hsl(0, 0%, 100%);
+    --background-menu: hsl(0, 0%, 90%);
+    --foreground: hsl(210, 10%, 23%);
+    --border: hsla(0, 0%, 30%, 0.285);
+    --input: hsl(210, 25%, 90%);
+    --ring: hsl(210, 10%, 23%);
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --modal-bg: hsla(0, 0%, 18%, 0.721);
+    --modal-card: hsl(0, 0%, 96%);
+
+    --border: hsla(0, 0%, 30%, 0.285);
+    --input: 20 5.9% 90%;
+    --ring: 20 14.3% 4.1%;
+
+--icon: hsl(0, 0%, 0%);
+--icon-bg: hsla(0, 0%, 0%, 0.136);
+
+  }
+
+  .dark {
+    --primary-text: hsl(21, 100%, 90%);
+    --muted-text: hsla(21, 61%, 79%, 0.782);
+    --background: hsl(21, 42%, 12%);
+    --background-menu: hsl(21, 59%, 5%);
+    --background-menu-hover: hsl(21, 59%, 10%);
+    --foreground: hsl(22, 27%, 80%);
+    --foreground-menu: hsl(21, 100%, 90%);
+    --foreground-menu-hover: hsl(21, 100%, 100%);
+
+    --disabled: hsla(0, 0%, 51%, 0.119);
+    --disabled-foreground: hsla(0, 0%, 76%, 0.575);
+    --disabled-hover: hsla(0, 0%, 51%, 0.119);
+    --disabled-foreground-hover: hsla(0, 0%, 76%, 0.575);
+    --disabled-hover-border: hsla(0, 0%, 80%, 0);
+
+    --translucent: hsla(0, 0%, 0%, 0.4);
+    --translucent-foreground: hsl(21, 100%, 90%);
+    --translucent-hover: hsla(0, 0%, 0%, 0.8);
+    --translucent-hover-border: hsla(21, 100%, 80%, 0.349);
+
+    --border: hsla(0, 0%, 69%, 0.198);
+    --input: hsla(12, 48%, 6%, 0.778);
+    --ring: hsl(24, 40%, 34%);
+
+    --modal-bg: hsla(21, 55%, 10%, 0.546);
+    --modal-card: hsl(22, 41%, 12%);
+
+    --link: hsl(25, 41%, 60%);
+    --icon: hsl(25, 69%, 66%);
+    --icon-bg: hsla(0, 0%, 16%, 0.392);
+
+    --background-object: hsla(0, 0%, 0%, 0.60);
+    --background-line: hsla(33, 32%, 41%, 0.2);
+    --muted-text: hsl(21, 20%, 53%);
+
+    --bg-user-menu: hsla(24, 41%, 7%, 0.903);
+    --bg-bottom-menu: hsla(22, 83%, 7%, 0.954);
+    --muted-foreground: hsl(21, 20%, 53%);
+
+    .text-destructive{
+      color: hsl(0, 83%, 75%);
+    }
+
+    a{
+      @apply text-[var(--link)];
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:active,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      background-color: var(--input) !important;
+      color: hsl(21, 100%, 90%) !important;
+      border: none;
+      -webkit-text-fill-color: hsl(21, 100%, 90%) !important;
+      -webkit-box-shadow: 0 0 0 1000px var(--input) inset !important;
+      -webkit-background-clip: text !important;
+      background-clip: text !important;
+      @apply !text-base;
+    }
+
+
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+
+}
+
+.logo {
+  background-image: url('/images/EKONAVI-logo-icon.svg');
+  background-size: 100% 100%;
+  background-position: 50%;
+  width: 45px;
+}
+
+@media (min-width:640px) {
+  .logo {
+    background: url('/images/EKONAVI-agrofloresta-marca-logo.svg');
+    background-size: 100% 100%;
+    background-position: 50%;
+    width: 145px;
+  }
+}
+
+.logo-white {
+  background: url('/images/EKONAVI-agrofloresta-marca-logo-white.svg');
+  background-size: 100% 100%;
+  background-position: 50%;
+}
+
+.logo-icon-white {
+  background: url('/images/EKONAVI-logo-icon-white.svg');
+  background-size: 100% 100%;
+  background-position: 0;
+  background-repeat: no-repeat;
+  width: 35px;
+  top: -3px;
+  left: 9px;
+}
+
+.watermark {
+  background: url('/images/EKONAVI-marca-only.svg');
+  background-size: 100% 100%;
+  background-position: 50%;
+  opacity: 0.2;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #eee;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: 500;
+  max-width: 200px;
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+
+.nav-menu-user-vertical,
+.nav-menu-mobile-main-vertical {
+  right: -100%;
+  transition: right 0.3s ease-in-out;
+}
+
+.nav-menu-user-vertical.nav-menu-open,
+.nav-menu-mobile-main-vertical.nav-menu-open {
+  right: 0;
+}
+
+.nav-menu-user-vertical.nav-menu-closed,
+.nav-menu-mobile-main-vertical.nav-menu-closed {
+  right: -100%;
+}

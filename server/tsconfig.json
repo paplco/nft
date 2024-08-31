@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"noEmit": true,
+		"module": "esnext",
+		"target": "es2022",
+		"lib": ["es2022"],
+		"strict": true,
+		"alwaysStrict": true,
+		"preserveConstEnums": true,
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true /* Enable importing .json files */,
+		"types": ["@cloudflare/workers-types/experimental", "@types/node"],
+		"baseUrl": "./src",
+		"paths": {
+			"@/*": ["./*"],
+			"@api/*": ["./api/*"],
+			"@services/*": ["./services/*"],
+			"@utils/*": ["./utils/*"],
+			"@i18n/*": ["./utils/i18n/*"]
+		}
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "dist", "test"]
+}

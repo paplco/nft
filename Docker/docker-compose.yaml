@@ -1,0 +1,19 @@
+services:
+  arbitrum-node:
+    image: offchainlabs/nitro-node:v3.1.0-7d1d84c
+    container_name: arbitrum-node
+    volumes:
+      - ./arbitrum_data:/home/user/.arbitrum
+    ports:
+      - "8547:8547"  # HTTP-RPC port
+      - "8548:8548"  # WebSocket-RPC port
+    command: >
+      --dev
+      --http.api=net,web3,eth
+      --http.corsdomain=*
+      --http.addr=0.0.0.0
+      --http.vhosts=*
+      --ws.port=8548
+      --ws.addr=0.0.0.0
+      --ws.origins=*
+    restart: always

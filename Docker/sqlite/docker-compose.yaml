@@ -1,0 +1,17 @@
+services:
+  sqlite:
+    image: nouchka/sqlite3
+    container_name: sqlite-db
+    volumes:
+      - ./data:/data
+    command: sqlite3 /data/mydatabase.db
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    environment:
+      - ADMINER_PLUGINS=sqlite
+    ports:
+      - 8080:8080
+    depends_on:
+      - sqlite
